@@ -54,7 +54,7 @@ export default {
       this.$store.dispatch("removeFromCart", product);
     },
     getPrice(product) {
-      return new Decimal(product.price/100).toFixed(2);
+      return new Decimal(product.price).toFixed(2);
     },
     updateCart(event) {
       this.$store.dispatch("updateCart", event)
